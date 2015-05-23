@@ -33,10 +33,10 @@ $('#cordova-vibration').bind('click', function(event){//evento click
 
 $('#cordova-vibration-pattern').bind('click', function(event){
 
-    navigator.vibrateWithPattern([3000, 200, 1000, 300, 4000, 200, 1000]); //patron de vibracion en milisegundos
+    //navigator.vibrateWithPattern([3000, 200, 1000, 300, 4000, 200, 1000]); //patron de vibracion en milisegundos
 
     // para firefoxos
-    // navigator.vibrate([3000, 200, 1000, 300, 4000, 200, 1000]);
+    navigator.vibrate([3000, 200, 1000, 300, 4000, 200, 1000]);
 
 });
 
