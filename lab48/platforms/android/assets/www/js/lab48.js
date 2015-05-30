@@ -8,6 +8,7 @@ $(document).on('pagecreate', '#home', function(){ //pagecreate le delega el even
 	        console.log(imageURI);
 
 	        $('#url-picture').append('<span>' + imageURI + '</span>');
+            $('#url-picture').append('<img src="' + imageURI + '"/>');
 
 	        console.log('onCameraSuccess imageURI: ' + imageURI);
         }
@@ -23,7 +24,7 @@ $(document).on('pagecreate', '#home', function(){ //pagecreate le delega el even
             sourceType: Camera.PictureSourceType.CAMERA, //por defecto camara, se puede poner en galeria
             destinationType: Camera.DestinationType.FILE_URI, //lugar donde se almacena la foto
             allowEdit: true, //permite editar
-            encodingType: Camera.EncodingType.PNG, // formato
+            encodingType: Camera.EncodingType.JPEG, // formato
             targetWidth: 1024, //ancho
             targetHeight: 768 //alto
         };
