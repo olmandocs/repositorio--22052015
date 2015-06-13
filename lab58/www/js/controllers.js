@@ -123,7 +123,7 @@ angular.module('lab57.Controllers', [])
                                         '<div class="col">.col</div>'+
                                     '</div>';
 
-            var list_element = angular.element( document.querySelector( '#elements' ) );
+            var list_element = angular.element( document.querySelector( '#elements' ) ); //busca el id element y le hace el append
 
             list_element.append( $scope.elements_ionic );
 
