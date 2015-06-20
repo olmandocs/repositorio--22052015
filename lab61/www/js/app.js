@@ -18,7 +18,7 @@ angular.module('lab59', ['ionic'])
   });
 })
 
-.config(function($stateProvider, $urlRouterProvider) {
+.config(function($stateProvider, $urlRouterProvider, $compileProvider) {
   $stateProvider
       .state('home', {
         url: "/",
@@ -38,6 +38,9 @@ angular.module('lab59', ['ionic'])
       });
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/');
+
+   // for Firefox OS only..
+     $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|ftp|mailto|app):/);
 })
 
 .controller('lab59.Controller', function($scope, $ionicSideMenuDelegate) {
